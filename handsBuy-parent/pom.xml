@@ -10,6 +10,7 @@
     <modules>
         <module>handsBuy-entity</module>
         <module>handsBuy-dao</module>
+        <module>handsBuy-common</module>
         <module>handsBuy-interface</module>
         <module>handsBuy-service</module>
         <module>handsBuy-manage-web</module>
@@ -258,6 +259,11 @@
                 <groupId>xml-apis</groupId>
                 <artifactId>xml-apis</artifactId>
                 <version>1.4.01</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.10</version>
             </dependency>
         </dependencies>
 
