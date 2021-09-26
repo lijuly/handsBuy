@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/handsBuy-parent/handsBuy-dao/handsBuy-dao.iml" filepath="$PROJECT_DIR$/handsBuy-parent/handsBuy-dao/handsBuy-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/handsBuy-parent/handsBuy-entity/handsBuy-entity.iml" filepath="$PROJECT_DIR$/handsBuy-parent/handsBuy-entity/handsBuy-entity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/handsBuy-parent/handsBuy-interface/handsBuy-interface.iml" filepath="$PROJECT_DIR$/handsBuy-parent/handsBuy-interface/handsBuy-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/handsBuy-parent/handsBuy-manage-web/handsBuy-manage-web.iml" filepath="$PROJECT_DIR$/handsBuy-parent/handsBuy-manage-web/handsBuy-manage-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/handsBuy-parent/handsBuy-parent.iml" filepath="$PROJECT_DIR$/handsBuy-parent/handsBuy-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/handsBuy-parent/handsBuy-service/handsBuy-service.iml" filepath="$PROJECT_DIR$/handsBuy-parent/handsBuy-service/handsBuy-service.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="handsBuy-manage-web:war">
+    <output-path>$PROJECT_DIR$/handsBuy-parent/handsBuy-manage-web/target</output-path>
+    <root id="archive" name="handsBuy-manage-web-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="handsBuy-manage-web:war exploded" />
+    </root>
+  </artifact>
+</component>

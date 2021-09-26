@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="handsBuy-service:war">
+    <output-path>$PROJECT_DIR$/handsBuy-parent/handsBuy-service/target</output-path>
+    <root id="archive" name="handsBuy-service-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="handsBuy-service:war exploded" />
+    </root>
+  </artifact>
+</component>

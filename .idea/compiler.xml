@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="handsBuy-dao" />
+        <module name="handsBuy-entity" />
+        <module name="handsBuy-interface" />
+        <module name="handsBuy-manage-web" />
+        <module name="handsBuy-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="handsBuy-dao" target="1.8" />
+      <module name="handsBuy-entity" target="1.8" />
+      <module name="handsBuy-interface" target="1.8" />
+      <module name="handsBuy-manage-web" target="1.8" />
+      <module name="handsBuy-parent" target="1.8" />
+      <module name="handsBuy-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
