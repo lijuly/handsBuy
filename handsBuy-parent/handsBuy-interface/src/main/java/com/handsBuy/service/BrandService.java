@@ -10,4 +10,10 @@ public interface BrandService {
     List<TbBrand> findAll();
 
     PageHelperUtil<TbBrand> findAllByPages(Integer page, Integer pageSize);
+
+    int addBrand(TbBrand brand);
+
+    int updateBrand(TbBrand brand);
+
+    int deleteBrand(long[] ids);
 }

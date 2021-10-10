@@ -47,4 +47,25 @@ public class BrandServiceImpl implements BrandService {
 
         return result;
     }
+
+    @Override
+    public int addBrand(TbBrand brand) {
+        return brandDao.addBrand(brand);
+    }
+
+    @Override
+    public int updateBrand(TbBrand brand) {
+        return brandDao.updateBrand(brand);
+    }
+
+    @Override
+    public int deleteBrand(long[] ids) {
+        int result = 0;
+        for (long id : ids) {
+            if(brandDao.deleteBrand(id) != 0) {
+                result++;
+            }
+        }
+        return result;
+    }
 }

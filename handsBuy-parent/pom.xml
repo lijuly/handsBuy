@@ -15,6 +15,13 @@
         <module>handsBuy-service</module>
         <module>handsBuy-manage-web</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
     <packaging>pom</packaging>
 
     <!-- 集中定义依赖版本号 -->
