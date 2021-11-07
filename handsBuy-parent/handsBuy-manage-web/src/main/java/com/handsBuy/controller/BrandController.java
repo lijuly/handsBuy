@@ -53,9 +53,9 @@ public class BrandController {
     public Result deleteBrand(long[] ids) {
         int res = brandService.deleteBrand(ids);
         if (res != 0) {
-            return new Result(true, "修改成功");
+            return new Result(true, "删除成功");
         } else {
-            return new Result(false, "修改失败");
+            return new Result(false, "删除失败");
         }
     }
 
