@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.handsBuy.dao.specificationDao">
+
+    <!-- 配置 查询结果的列名和实体类的属性名的对应关系 -->
+    <resultMap id="specificationMap" type="com.handsBuy.entity.TbSpecification">
+        <!-- 主键字段的对应 -->
+        <id property="id" column="id"></id>
+        <!--非主键字段的对应-->
+        <result property="specName" column="spec_name"></result>
+        <collection property="specificationOptionList" ofType="com.handsBuy.entity.SpecificationOption">
+            <id property="optionId" column="option_id"></id>
+            <result property="optionName" column="option_name"></result>
+            <result property="specId" column="spec_id"></result>
+            <result property="orders" column="orders"></result>
+        </collection>
+    </resultMap>
+
+    <!-- 查询所有信息-->
+    <select id="findAll" resultMap="specificationMap">
+        select a1.id,
+               a1.spec_name,
+               a2.id as option_id,
+               a2.option_name,
+               a2.orders,
+               a2.spec_id
+               from tb_specification as a1
+               LEFT JOIN tb_specification_option as a2
+               on a1.id = a2.spec_id;
+    </select>
+</mapper>

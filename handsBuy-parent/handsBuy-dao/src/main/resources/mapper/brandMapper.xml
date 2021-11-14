@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.handsBuy.dao.BrandDao">
+
+    <!-- 配置 查询结果的列名和实体类的属性名的对应关系 -->
+    <resultMap id="brandMap" type="com.handsBuy.entity.TbBrand">
+        <!-- 主键字段的对应 -->
+        <id property="id" column="id"></id>
+        <!--非主键字段的对应-->
+        <result property="name" column="name"></result>
+        <result property="firstChar" column="firstChar"></result>
+    </resultMap>
+
+    <select id="findAll" resultMap="brandMap">
+        select * from tb_brand;
+    </select>
+
+    <!-- 删除用户-->
+    <delete id="deleteBrandByIds" parameterType="list">
+        delete from tb_brand where id in
+        <foreach collection="list" item="id" open="(" separator="," close=")">
+          #{id}
+        </foreach>
+    </delete>
+</mapper>

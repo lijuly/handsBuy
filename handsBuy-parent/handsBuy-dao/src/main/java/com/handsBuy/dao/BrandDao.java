@@ -14,7 +14,7 @@ public interface BrandDao {
      *
      * @return 所有品牌列表
      */
-    @Select("select * from tb_brand")
+    //@Select("select * from tb_brand")
     List<TbBrand> findAll();
 
     /**
@@ -36,14 +36,19 @@ public interface BrandDao {
 
     /**
      * 批量删除品牌
-     * @param id
+     * @param ids
      */
-    /*@Delete("<script>" +
+    @Delete("<script>" +
                 "delete from tb_brand where id in " +
-                "<foreach collection='array' item='id' open='('separator=',' close=')'>"+
+                "<foreach collection='array' item='id' open='(' separator=',' close=')'>"+
                     "#{id}" +
                 "</foreach>" +
-            "</script>")*/
-    @Delete("delete from tb_brand where id=#{id}")
-    int deleteBrand(long id);
+            "</script>")
+    int deleteBrand(long[] ids);
+
+    /**
+     * 批量删除品牌
+     * @param ids
+     */
+    int deleteBrandByIds(List<Long> ids);
 }

@@ -9,6 +9,9 @@ import com.handsBuy.entity.TbBrand;
 import com.handsBuy.service.BrandService;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -60,12 +63,9 @@ public class BrandServiceImpl implements BrandService {
 
     @Override
     public int deleteBrand(long[] ids) {
-        int result = 0;
-        for (long id : ids) {
-            if(brandDao.deleteBrand(id) != 0) {
-                result++;
-            }
-        }
-        return result;
+        //return brandDao.deleteBrand(ids);
+        List<Long> idList = new ArrayList<>();
+        Arrays.stream(ids).forEach(id -> idList.add((Long)id));
+        return brandDao.deleteBrandByIds(idList);
     }
 }

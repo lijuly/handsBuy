@@ -4,6 +4,8 @@ import java.io.Serializable;
 
 public class TbBrand implements Serializable{
 
+    private static final long serialVersionUID = 1L;
+
     private Long id;
 
     private String name;
@@ -36,6 +38,10 @@ public class TbBrand implements Serializable{
 
     @Override
     public String toString() {
-        return super.toString();
+        return "Tb_brand["
+                + "id:" + this.id
+                + "  name:" + this.name
+                + "  firstChar:" + this.firstChar
+                + "]";
     }
 }
