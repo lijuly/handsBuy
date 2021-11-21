@@ -11,6 +11,13 @@ public class TbBrand implements Serializable{
     private String name;
 
     private String firstChar;
+    public TbBrand() {
+    }
+
+    public TbBrand(String name, String firstChar) {
+        this.name = name;
+        this.firstChar = firstChar;
+    }
 
     public void setId(Long id) {
         this.id = id;
@@ -39,9 +46,9 @@ public class TbBrand implements Serializable{
     @Override
     public String toString() {
         return "Tb_brand["
-                + "id:" + this.id
-                + "  name:" + this.name
-                + "  firstChar:" + this.firstChar
+                + "  id = " + this.id
+                + "  name = " + this.name
+                + "  firstChar = " + this.firstChar
                 + "]";
     }
 }

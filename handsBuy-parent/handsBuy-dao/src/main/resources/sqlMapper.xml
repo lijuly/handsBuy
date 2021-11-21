@@ -26,8 +26,8 @@
 
 	<!-- 引入映射配置文件 -->
 	<mappers>
-		<mapper resource="mapper/brandMapper.xml"></mapper>
-		<mapper resource="mapper/specificationMapper.xml"></mapper>
-		<!--<package name="com.handsBuy.dao"></package>-->
+		<!--<mapper resource="mapper/brandMapper.xml"></mapper>
+		<mapper resource="mapper/specificationMapper.xml"></mapper>-->
+		<package name="com.handsBuy.dao"></package>
 	</mappers>
 </configuration>

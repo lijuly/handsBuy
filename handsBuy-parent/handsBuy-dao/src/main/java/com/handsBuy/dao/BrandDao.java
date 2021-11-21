@@ -23,7 +23,7 @@ public interface BrandDao {
      * @param brand 品牌
      * @return
      */
-    @Insert("insert into tb_brand(name, firstChar) values(#{name}, #{firstChar})")
+    //@Insert("insert into tb_brand(name, firstChar) values(#{name}, #{firstChar})")
     int addBrand(TbBrand brand);
 
     /**
@@ -31,20 +31,20 @@ public interface BrandDao {
      * @param brand 品牌
      * @return
      */
-    @Update("update tb_brand set name=#{name}, firstChar=#{firstChar} where id=#{id}")
+    //@Update("update tb_brand set name=#{name}, firstChar=#{firstChar} where id=#{id}")
     int updateBrand(TbBrand brand);
 
     /**
      * 批量删除品牌
      * @param ids
      */
-    @Delete("<script>" +
+    /*@Delete("<script>" +
                 "delete from tb_brand where id in " +
                 "<foreach collection='array' item='id' open='(' separator=',' close=')'>"+
                     "#{id}" +
                 "</foreach>" +
             "</script>")
-    int deleteBrand(long[] ids);
+    int deleteBrand(long[] ids);*/
 
     /**
      * 批量删除品牌

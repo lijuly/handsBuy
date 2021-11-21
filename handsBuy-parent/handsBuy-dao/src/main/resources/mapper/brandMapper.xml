@@ -9,19 +9,30 @@
         <!-- 主键字段的对应 -->
         <id property="id" column="id"></id>
         <!--非主键字段的对应-->
-        <result property="name" column="name"></result>
+        <result property="name" column="brandName"></result>
         <result property="firstChar" column="firstChar"></result>
     </resultMap>
 
+    <!-- 查询所有信息-->
     <select id="findAll" resultMap="brandMap">
-        select * from tb_brand;
+        select id, brandName, firstChar from tb_brand
     </select>
+
+    <insert id="addBrand" parameterType="com.handsBuy.entity.TbBrand">
+        insert into tb_brand(brandName, firstChar) values(#{name}, #{firstChar});
+    </insert>
+
+    <update id="updateBrand"  parameterType="com.handsBuy.entity.TbBrand">
+        update tb_brand set brandName=#{name}, firstChar=#{firstChar} where id=#{id};
+    </update>
 
     <!-- 删除用户-->
     <delete id="deleteBrandByIds" parameterType="list">
         delete from tb_brand where id in
         <foreach collection="list" item="id" open="(" separator="," close=")">
-          #{id}
+            #{id}
         </foreach>
     </delete>
+
+
 </mapper>

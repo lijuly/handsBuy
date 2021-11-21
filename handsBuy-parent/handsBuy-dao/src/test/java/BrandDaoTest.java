@@ -14,7 +14,7 @@ import java.util.List;
 
 public class BrandDaoTest {
 
-
+/**
     private InputStream inputStream;
 
     private SqlSession sqlSession;
@@ -51,6 +51,12 @@ public class BrandDaoTest {
     }
 
     @Test
+    public void addBrand_Test() {
+        TbBrand brand = new TbBrand("YUHZE", "Y");
+        brandDao.addBrand(brand);
+    }
+
+    @Test
     public void deleteBrandByIds_Test() {
         List<TbBrand> brands = brandDao.findAll();
         brands.forEach(brand -> System.out.println(brand.toString()));
@@ -60,5 +66,5 @@ public class BrandDaoTest {
         brandDao.deleteBrandByIds(list);
         brands = brandDao.findAll();
         brands.forEach(brand -> System.out.println(brand.toString()));
-    }
+    }*/
 }

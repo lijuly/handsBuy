@@ -20,7 +20,7 @@ public class TbSpecification  implements Serializable {
     /**
      * 规格集合
      * */
-    private List<SpecificationOption> specificationOptionList;
+    private List<TbSpecificationOption> specificationOptionList;
 
 
     public Long getId() {
@@ -39,16 +39,26 @@ public class TbSpecification  implements Serializable {
         this.specName = specName;
     }
 
-    public List<SpecificationOption> getSpecificationOptionList() {
+    public List<TbSpecificationOption> getSpecificationOptionList() {
         return specificationOptionList;
     }
 
-    public void setSpecificationOptionList(List<SpecificationOption> specificationOptionList) {
+    public void setSpecificationOptionList(List<TbSpecificationOption> specificationOptionList) {
         this.specificationOptionList = specificationOptionList;
     }
 
     @Override
     public String toString() {
-        return super.toString();
+        StringBuilder sb = new StringBuilder();
+        for (TbSpecificationOption option : specificationOptionList) {
+            sb.append(option.toString());
+            sb.append(", ");
+        }
+        return "Tb_Specification[" +
+                " id = " + this.id +
+                " specName = " + this.specName +
+                " SpecificationOptionList [" +
+                sb.toString() +
+                "]";
     }
 }
