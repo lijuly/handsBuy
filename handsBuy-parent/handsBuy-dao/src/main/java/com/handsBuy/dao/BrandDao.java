@@ -34,7 +34,7 @@ public interface BrandDao {
      * 批量删除品牌
      * @param ids
      */
-    /*@Delete("<script>" +
+    /* @Delete("<script>" +
                 "delete from tb_brand where id in " +
                 "<foreach collection='array' item='id' open='(' separator=',' close=')'>"+
                     "#{id}" +
